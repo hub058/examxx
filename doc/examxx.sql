@@ -111,9 +111,12 @@ CREATE TABLE `et_knowledge_point` (
   PRIMARY KEY (`point_id`),
   KEY `fk_knowledge_field` (`field_id`),
   CONSTRAINT `et_knowledge_point_ibfk_1` FOREIGN KEY (`field_id`) REFERENCES `et_field` (`field_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 /*Data for the table `et_knowledge_point` */
+
+insert  into `et_knowledge_point`(`point_id`,`point_name`,`field_id`,`memo`,`state`) values 
+(6,'SpringIOC',3,'IOC容器',1);
 
 /*Table structure for table `et_news` */
 
@@ -352,7 +355,7 @@ CREATE TABLE `et_user` (
 /*Data for the table `et_user` */
 
 insert  into `et_user`(`id`,`username`,`truename`,`password`,`email`,`phone`,`add_date`,`expire_date`,`add_by`,`enabled`,`field_id`,`last_login_time`,`login_time`,`province`,`company`,`department`) values 
-(4,'admin',NULL,'260acbffd3c30786febc29d7dd71a9880a811e77','1@1.1',NULL,'2020-06-06 17:48:02',NULL,NULL,1,1,'2020-06-06 17:27:30','2020-06-06 17:48:02',NULL,'2','3');
+(4,'admin',NULL,'260acbffd3c30786febc29d7dd71a9880a811e77','1@1.1',NULL,'2020-06-06 18:50:17',NULL,NULL,1,3,'2020-06-06 17:27:30','2020-06-06 17:48:02',NULL,'2','3');
 
 /*Table structure for table `et_user_exam_history` */
 
